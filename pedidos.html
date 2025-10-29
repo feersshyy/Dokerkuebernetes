@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos - AutoPartes MX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/pedidos.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="imagen/Gemini_Generated_Image_2mdhva2mdhva2mdh-modified (1).png" alt="AutoPartes MX"
+                        class="logo-image">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="pedidos.html">Mis Pedidos</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="index.html#recomendaciones">Recomendaciones</a></li>
+                    </ul>
+                </nav>
+                <!-- Ícono de carrito -->
+                <div class="cart-icon" id="open-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+
+                <!-- Ícono de login -->
+                <div class="login-icon">
+                    <a href="loggin.html" title="Iniciar sesión">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrito de Compras -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito de Compras</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart-message" id="empty-cart-message">
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-amount">0.00</span>
+            </div>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Sección Principal de Pedidos -->
+    <section class="pedidos-hero">
+        <div class="container">
+            <h2>Mis Pedidos</h2>
+            <p>Revisa el estado de tus pedidos y el historial de compras</p>
+        </div>
+    </section>
+
+    <section class="pedidos-container">
+        <div class="container">
+            <!-- Filtros -->
+            <div class="pedidos-filters">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Pendientes</button>
+                <button class="filter-btn">En camino</button>
+                <button class="filter-btn">Entregados</button>
+            </div>
+
+            <h1>Lista de Pedidos</h1>
+            <div id="contenedor-pedidos"></div>
+
+
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>AutoPartes MX</h3>
+                            <p>Tu proveedor confiable de autopartes de calidad. Ofrecemos los mejores precios y servicio
+                                al
+                                cliente excepcional.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>Enlaces Rápidos</h3>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Inicio</a></li>
+                                <li><a href="index.html#categorias">Categorías</a></li>
+                                <li><a href="index.html#productos">Productos</a></li>
+                                <li><a href="pedidos.html">Mis Pedidos</a></li>
+                                <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>Información de Contacto</h3>
+                            <ul class="contact-info">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Av. Insurgentes 123, CDMX, México</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <span>+52 55 1234 5678</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <span>info@autopartesmx.com</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock"></i>
+                                    <span>Lun - Vie: 9:00 AM - 6:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>Newsletter</h3>
+                            <p>Suscríbete para recibir ofertas exclusivas y novedades sobre productos.</p>
+                            <div class="search-box" style="margin-top: 15px;">
+                                <input type="email" placeholder="Tu correo electrónico">
+                                <button><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                        <p>&copy; 2023 AutoPartes MX. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <script src="js/script.js"></script>
+            <script src="js/pedidos.js"></script>
+
+</body>
+
+</html>

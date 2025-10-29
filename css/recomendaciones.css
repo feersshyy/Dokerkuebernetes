@@ -1,0 +1,375 @@
+/* aqui empieza el estilo para recomendaciones */
+.recomendaciones-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.recomendaciones-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.recomendaciones-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.recomendaciones-container {
+    padding: 50px 0;
+    background: var(--light);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Selector de Vehículo */
+.vehicle-selector {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+}
+
+.vehicle-selector h3 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.selector-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: white;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-group select:disabled {
+    background: #f8f9fa;
+    color: var(--gray);
+    cursor: not-allowed;
+}
+
+#buscar-recomendaciones {
+    height: fit-content;
+}
+
+/* Categorías de Recomendaciones */
+.categorias-recomendaciones {
+    margin-bottom: 50px;
+}
+
+.categorias-recomendaciones h3 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.categoria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.categoria-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.categoria-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.categoria-header i {
+    font-size: 1.5rem;
+}
+
+.categoria-header h4 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.categoria-productos {
+    padding: 20px;
+}
+
+.producto-recomendado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.producto-recomendado:hover {
+    border-color: var(--accent);
+    background: #f8f9fa;
+}
+
+.producto-image {
+    width: 60px;
+    height: 60px;
+    background: var(--light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.producto-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 6px;
+}
+
+.producto-info {
+    flex: 1;
+}
+
+.producto-info h5 {
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.producto-info p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.producto-precio {
+    font-weight: 600;
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+.producto-precio::before {
+    content: "$";
+}
+
+.btn-add {
+    background: var(--success);
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.btn-add:hover {
+    background: #27ae60;
+    transform: scale(1.1);
+}
+
+/* Kits Recomendados */
+.kits-recomendados h3 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.kits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.kit-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.kit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-color: var(--accent);
+}
+
+.kit-header {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.kit-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--secondary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.kit-header h4 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.kit-productos ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.kit-productos li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--dark);
+    position: relative;
+    padding-left: 20px;
+}
+
+.kit-productos li:before {
+    content: "✓";
+    color: var(--success);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.kit-productos li:last-child {
+    border-bottom: none;
+}
+
+.kit-precio {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--light);
+    border-radius: 8px;
+}
+
+.precio-original {
+    text-decoration: line-through;
+    color: var(--gray);
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.precio-original::before {
+    content: "$";
+}
+
+.precio-oferta {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.precio-oferta::before {
+    content: "$";
+}
+
+.btn-kit {
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .selector-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .categoria-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .producto-recomendado {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .kits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .kit-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vehicle-selector {
+        padding: 20px;
+    }
+    
+    .categoria-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+/*aqui termina recomendaciones*/

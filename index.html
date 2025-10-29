@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPartes MX - Repuestos de Calidad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/recomendaciones.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="imagen/Gemini_Generated_Image_2mdhva2mdhva2mdh-modified (1).png" alt="AutoPartes MX"
+                        class="logo-image">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="pedidos.html">Mis Pedidos</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="index.html#recomendaciones">Recomendaciones</a></li>
+                    </ul>
+                </nav>
+                <!-- Ícono de carrito -->
+                <div class="cart-icon" id="open-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+
+                <!-- Ícono de login -->
+                <div class="login-icon">
+                    <a href="loggin.html" title="Iniciar sesión">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <p id="usuario-nombre"></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrito de Compras -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito de Compras</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Los productos del carrito se añadirán aquí dinámicamente -->
+            <div class="empty-cart-message" id="empty-cart-message">
+                <p>Tu carrito está vacío</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-amount">0.00</span>
+            </div>
+            <button class="checkout-btn">Proceder al Pago</button>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h2>Encuentra las mejores autopartes al mejor precio</h2>
+            <p>Tenemos todo lo que necesitas para tu vehículo. Calidad garantizada y envío rápido a todo México.</p>
+            <a href="#productos" class="btn">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Sección de Quienes somos -->
+    <section class="quienes-somos">
+        <div class="container">
+            <h2>¿Quiénes Somos?</h2>
+            <p>En AutoPartes MX, somos un equipo apasionado por ofrecer las mejores
+                autopartes para tu vehículo. Con años de experiencia en la industria,
+                nos comprometemos a brindar calidad, confianza y un servicio al cliente excepcional.</p>
+        </div>
+        <div class="container">
+            <h2>Nuestra Misión</h2>
+            <p>Brindar a nuestros clientes las mejores autopartes del mercado, garantizando
+                calidad y un servicio excepcional.</p>
+            <h2>Nuestra Visión</h2>
+            <p>Ser la tienda en línea líder en autopartes en México, reconocida por
+                nuestra calidad y atención al cliente.</p>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="container" id="productos">
+        <h2>Lista de Productos</h2>
+        <div id="productos-container"></div>
+    </section>
+
+    <!--Seccion de recomendacciones-->
+    <section class="recomendaciones-hero" id="recomendaciones">
+        <div class="container">
+            <h2>Recomendaciones Personalizadas</h2>
+            <p>Encuentra las autopartes perfectas para tu vehículo basado en tus necesidades</p>
+        </div>
+    </section>
+
+    <section class="recomendaciones-container">
+        <div class="container">
+            <div id="recomendaciones-list"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AutoPartes MX</h3>
+                    <p>Tu proveedor confiable de autopartes de calidad. Ofrecemos los mejores precios y servicio al
+                        cliente excepcional.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Información de Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Insurgentes 123, CDMX, México</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+52 55 1234 5678</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@autopartesmx.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun - Vie: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir ofertas exclusivas y novedades sobre productos.</p>
+                    <div class="search-box" style="margin-top: 15px;">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 AutoPartes MX. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/recomendaciones.js"></script>
+    <script src="js/api-productos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const usuarioTexto = document.getElementById("usuario-nombre");
+            const usuarioGuardado = localStorage.getItem("usuario");
+
+            if (usuarioGuardado) {
+                const usuario = JSON.parse(usuarioGuardado);
+                usuarioTexto.textContent = `Hola, ${usuario.nombre}`;
+            } else {
+                usuarioTexto.textContent = "Bienvenido, visitante";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
