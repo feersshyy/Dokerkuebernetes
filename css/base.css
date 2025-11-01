@@ -37,35 +37,6 @@ body {
     padding: 0 15px;
 }
 
-/* Botones generales */
-.btn {
-    display: inline-block;
-    background: var(--secondary);
-    color: white;
-    padding: 12px 25px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #c0392b;
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid white;
-}
-
-.btn-outline:hover {
-    background: white;
-    color: var(--primary);
-}
-
 /* Títulos de secciones */
 .section-title {
     text-align: center;
@@ -83,6 +54,7 @@ body {
 }
 
 /* Footer */
+
 footer {
     background: var(--dark);
     color: white;
@@ -103,7 +75,7 @@ footer {
     padding-bottom: 10px;
 }
 
-.footer-column h3:after {
+.footer-column h3::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -113,8 +85,16 @@ footer {
     background: var(--secondary);
 }
 
-.footer-links {
+.footer-column p {
+    color: #bdc3c7;
+    line-height: 1.6;
+}
+
+.footer-links,
+.contact-info {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-links li {
@@ -124,7 +104,7 @@ footer {
 .footer-links a {
     color: #bdc3c7;
     text-decoration: none;
-    transition: var(--transition);
+    transition: color 0.3s, padding-left 0.3s;
 }
 
 .footer-links a:hover {
@@ -132,15 +112,12 @@ footer {
     padding-left: 5px;
 }
 
-.contact-info {
-    list-style: none;
-}
-
 .contact-info li {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 15px;
+    color: #bdc3c7;
 }
 
 .contact-info i {
@@ -163,7 +140,7 @@ footer {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: white;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {

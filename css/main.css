@@ -279,7 +279,17 @@
 .wishlist:hover {
     color: var(--secondary);
 }
-/* Carrito de Compras */
+
+/* ===== CARRO DE COMPRAS ===== */
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+    --transition: all 0.3s ease;
+    --gray: #555;
+    --secondary: #007bff;
+    --success: #2ecc71;
+}
+
+/* ===== CARRO DE COMPRAS ===== */
 .cart-sidebar {
     position: fixed;
     top: 0;
@@ -422,21 +432,27 @@
 }
 
 .checkout-btn {
-    width: 100%;
-    padding: 12px;
-    background: var(--success);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
+  display: block;           /* convierte el botón en un elemento de bloque */
+  margin: 20px auto;        /* centra horizontalmente */
+  width: 50%;
+  padding: 8px 10px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.checkout-btn:hover {
-    background: #27ae60;
+
+.btn-checkout:hover {
+    background: #0056b3; /* azul más oscuro */
 }
 
+
+/* Overlay */
 .cart-overlay {
     position: fixed;
     top: 0;
@@ -455,133 +471,43 @@
     visibility: visible;
 }
 
+/* Mensaje carrito vacío */
 .empty-cart-message {
     text-align: center;
     padding: 40px 20px;
     color: var(--gray);
 }
 
-/* Ofertas */
-.offers {
-    background: var(--light);
-    padding: 50px 0;
-    margin: 50px 0;
+/* Botón carrito superior */
+.cart-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1200;
 }
 
-.offer-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    display: flex;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.offer-image {
-    flex: 1;
-    background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.offer-content {
-    flex: 1;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.offer-tag {
-    background: var(--secondary);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.offer-content h3 {
+.cart-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
     font-size: 1.8rem;
-    margin-bottom: 15px;
+    color: var(--secondary); /* ahora será azul */
+    position: relative;
+    transition: color 0.3s ease; /* opcional, para que cambie suavemente al pasar el mouse */
 }
 
-.offer-content p {
-    margin-bottom: 20px;
-    color: var(--gray);
+.cart-icon:hover {
+    color: #0056b3; /* azul más oscuro al pasar el mouse */
 }
 
-.original-price {
-    text-decoration: line-through;
-    color: var(--gray);
-    margin-right: 10px;
-}
-
-.original-price::before, .offer-price::before {
-    content: "$";
-}
-
-.offer-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--secondary);
-}
-/* Testimonios */
-.testimonials {
-    margin: 50px 0;
-}
-
-.testimonial-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 20px 0;
-    scrollbar-width: thin;
-}
-
-.testimonial-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    padding: 25px;
-    min-width: 300px;
-    flex: 0 0 auto;
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 20px;
-    color: var(--dark);
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.author-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: crimson;
+    color: white;
+    font-size: 0.8rem;
     font-weight: bold;
-    color: var(--primary);
-}
-
-.author-info h4 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.author-info p {
-    font-size: 0.9rem;
-    color: var(--gray);
+    border-radius: 50%;
+    padding: 2px 6px;
 }

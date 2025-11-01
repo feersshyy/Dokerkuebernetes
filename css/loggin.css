@@ -1,130 +1,142 @@
+/* ===========================
+   LOGIN 
+   =========================== */
 
-/* ===== VARIABLES CSS ===== */
 :root {
-    --primary: #2c3e50;
-    --secondary: #e74c3c;
-    --accent: #3498db;
-    --light: #ecf0f1;
-    --dark: #2c3e50;
-    --gray: #95a5a6;
-    --success: #2ecc71;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+  --primary: #2c3e50;
+  --secondary: #e74c3c;
+  --accent: #3498db;
+  --light: #ecf0f1;
+  --dark: #2c3e50;
 }
-/* Fondo principal */
+
+/* ===== Reset general ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--dark);
 }
 
-/* Contenedor principal del formulario */
+/* ===== Contenedor del formulario ===== */
 section {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    box-shadow: var(--shadow);
-    padding: 2.5rem 2rem;
+  background: var(--light);
+  padding: 40px 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
 }
 
-/* Título */
+section:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Título ===== */
 h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: white;
-    font-size: 2rem;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 1.8rem;
 }
 
-/* Campos de entrada */
+/* ===== Input box ===== */
 .inputbox {
-    position: relative;
-    margin: 30px 0;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  color: var(--primary);
+  font-size: 20px;
 }
 
 .inputbox input {
-    width: 100%;
-    height: 40px;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 1rem;
-    padding: 0 35px 0 5px;
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.inputbox input:focus {
+  border-color: var(--accent);
 }
 
 .inputbox label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.7);
-    pointer-events: none;
-    transition: var(--transition);
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: var(--primary);
+  pointer-events: none;
+  transition: 0.3s;
 }
 
-/* Movimiento del label cuando el input tiene texto o foco */
 .inputbox input:focus ~ label,
 .inputbox input:valid ~ label {
-    top: -8px;
-    font-size: 0.85rem;
-    color: var(--accent);
+  top: -8px;
+  left: 28px;
+  background: var(--light);
+  padding: 0 5px;
+  font-size: 0.8rem;
+  color: var(--accent);
 }
 
-/* Iconos dentro de los inputs */
-.inputbox ion-icon {
-    position: absolute;
-    right: 8px;
-    top: 12px;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-
-/* Botón principal */
+/* ===== Botones ===== */
 button {
-    width: 100%;
-    background: var(--secondary);
-    color: white;
-    border: none;
-    outline: none;
-    padding: 12px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background: #c0392b;
-    transform: translateY(-3px);
+  background: var(--secondary);
+  transform: scale(1.02);
 }
 
+/* ===== Responsividad ===== */
+@media (max-width: 600px) {
+  section {
+    max-width: 90%;
+    padding: 30px 25px;
+  }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 480px) {
-    section {
-        width: 90%;
-        padding: 2rem 1.5rem;
-    }
+  h1 {
+    font-size: 1.5rem;
+  }
 
-    h1 {
-        font-size: 1.6rem;
-    }
+  input {
+    font-size: 0.95rem;
+  }
 
-    button {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
+  button {
+    font-size: 0.95rem;
+  }
 }

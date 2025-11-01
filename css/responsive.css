@@ -1,32 +1,106 @@
-/* =========================================================
-   responsive.css
-   Contiene los ajustes de diseño para pantallas pequeñas.
-   Incluye estilos adaptativos generales y de la sección de recomendaciones.
-   ========================================================= */
+/* responsive.css
+   Contiene los ajustes de diseño para pantallas pequeñas. */
 
 /* ===== Ajustes globales ===== */
 @media (max-width: 992px) {
     .offer-card { flex-direction: column; }
     .offer-image, .offer-content { flex: auto; }
     .cart-sidebar { width: 350px; }
+
+    /* Header */
+    .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .search-box input {
+        width: 160px;
+    }
+
+    /* Pedidos */
+    .pedidos-hero h2 {
+        font-size: 2rem;
+    }
+    .pedidos-hero p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer-column {
+        flex: 1 1 300px;
+    }
 }
 
 /* ===== Tablets ===== */
 @media (max-width: 768px) {
     nav ul { display: none; }
-    .mobile-menu { display: block; }
+    .mobile-menu { display: block; } /* Si tienes el icono de menú */
     .header-actions { gap: 10px; }
     .search-box input { width: 150px; }
     .hero h2 { font-size: 2rem; }
     .hero p { font-size: 1rem; }
     .cart-sidebar { width: 100%; right: -100%; }
 
-    /* Ajustes Recomendaciones */
+    /* ===== Sección Pedidos ===== */
+    .pedidos-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .pedidos-container h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    #contenedor-pedidos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ===== Ajustes Recomendaciones ===== */
     .selector-form,
     .categoria-grid,
     .kits-grid { grid-template-columns: 1fr; }
-    .producto-recomendado { flex-direction: column; text-align: center; }
-    .kit-badge { position: static; display: inline-block; margin-bottom: 10px; }
+
+    .producto-recomendado { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .kit-badge { 
+        position: static; 
+        display: inline-block; 
+        margin-bottom: 10px; 
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 /* ===== Móviles medianos ===== */
@@ -35,10 +109,78 @@
     .search-box { display: none; }
     .hero { padding: 60px 0; }
     .btn { padding: 10px 20px; font-size: 0.9rem; }
+
+    /* Header */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Pedidos */
+    .pedidos-hero {
+        padding: 40px 10px;
+    }
+    .pedidos-hero h2 {
+        font-size: 1.8rem;
+    }
+    .pedidos-hero p {
+        font-size: 0.95rem;
+    }
+
+    .pedidos-filters {
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-content {
+        padding: 20px;
+    }
+    .footer-column h3 {
+        font-size: 1.2rem;
+    }
+    .footer-links a,
+    .contact-info li {
+        font-size: 0.9rem;
+    }
 }
 
 /* ===== Móviles pequeños ===== */
 @media (max-width: 480px) {
     .vehicle-selector { padding: 20px; }
     .categoria-header { flex-direction: column; text-align: center; gap: 10px; }
+
+    /* Logo e íconos */
+    .logo img {
+        width: 60px;
+        height: auto;
+    }
+
+    .cart-icon, .login-icon {
+        font-size: 18px;
+    }
+
+    /* Pedidos */
+    .pedidos-hero h2 {
+        font-size: 1.5rem;
+    }
+    .pedidos-hero p {
+        font-size: 0.9rem;
+    }
+    .filter-btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .copyright p {
+        font-size: 0.8rem;
+    }
 }

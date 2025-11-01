@@ -32,12 +32,25 @@
                         <li><a href="index.html#recomendaciones">Recomendaciones</a></li>
                     </ul>
                 </nav>
-                <!-- Ícono de carrito -->
+
+                <!-- barrita de busqueda -->
+                <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar autopartes...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <!-- Carrito de Compras icono -->
                 <div class="cart-icon" id="open-cart">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="cart-count">0</span>
                 </div>
-
+                
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+                
                 <!-- Ícono de login -->
                 <div class="login-icon">
                     <a href="loggin.html" title="Iniciar sesión">
@@ -72,7 +85,7 @@
                 <span>Total:</span>
                 <span class="cart-total-amount">0.00</span>
             </div>
-            <button class="checkout-btn">Proceder al Pago</button>
+            <button class="checkout-btn">Proceder al pedido</button>
         </div>
     </div>
 
@@ -86,23 +99,6 @@
         </div>
     </section>
 
-    <!-- Sección de Quienes somos -->
-    <section class="quienes-somos">
-        <div class="container">
-            <h2>¿Quiénes Somos?</h2>
-            <p>En AutoPartes MX, somos un equipo apasionado por ofrecer las mejores
-                autopartes para tu vehículo. Con años de experiencia en la industria,
-                nos comprometemos a brindar calidad, confianza y un servicio al cliente excepcional.</p>
-        </div>
-        <div class="container">
-            <h2>Nuestra Misión</h2>
-            <p>Brindar a nuestros clientes las mejores autopartes del mercado, garantizando
-                calidad y un servicio excepcional.</p>
-            <h2>Nuestra Visión</h2>
-            <p>Ser la tienda en línea líder en autopartes en México, reconocida por
-                nuestra calidad y atención al cliente.</p>
-        </div>
-    </section>
 
     <!-- Productos Destacados -->
     <section class="container" id="productos">
@@ -126,68 +122,58 @@
 
     <!-- Footer -->
     <footer id="contacto">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>AutoPartes MX</h3>
-                    <p>Tu proveedor confiable de autopartes de calidad. Ofrecemos los mejores precios y servicio al
-                        cliente excepcional.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#categorias">Categorías</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#ofertas">Ofertas</a></li>
-                        <li><a href="#">Sobre Nosotros</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Información de Contacto</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Av. Insurgentes 123, CDMX, México</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+52 55 1234 5678</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>info@autopartesmx.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Lun - Vie: 9:00 AM - 6:00 PM</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Newsletter</h3>
-                    <p>Suscríbete para recibir ofertas exclusivas y novedades sobre productos.</p>
-                    <div class="search-box" style="margin-top: 15px;">
-                        <input type="email" placeholder="Tu correo electrónico">
-                        <button><i class="fas fa-paper-plane"></i></button>
-                    </div>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>AutoPartes MX</h3>
+                <p>Tu proveedor confiable de autopartes de calidad. Ofrecemos los mejores precios y servicio al
+                    cliente excepcional.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
-            <div class="copyright">
-                <p>&copy; 2023 AutoPartes MX. Todos los derechos reservados.</p>
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Información de Contacto</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Insurgentes 123, CDMX, México</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+52 55 1234 5678</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@autopartesmx.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Lun - Vie: 9:00 AM - 6:00 PM</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <!-- copyright separado correctamente -->
+        <div class="copyright">
+            <p>&copy; 2023 AutoPartes MX. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
 
     <script src="js/carrito.js"></script>
     <script src="js/recomendaciones.js"></script>
